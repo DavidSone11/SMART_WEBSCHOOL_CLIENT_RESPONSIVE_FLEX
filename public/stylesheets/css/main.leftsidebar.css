@@ -121,15 +121,18 @@ Left sidebar footer
     padding: 25px 0 0 0;
 }
 
-.sidebar-content-wrapper li a:hover {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 15px 35px 18px 25px;
-    margin: 0 0 0 4px;
+.sidebar-content-wrapper li :hover {
+    
+   background:  rgba(0, 0, 0, 0.3);
 }
 
 .sidebar-content-wrapper ul li a {
     text-decoration: none;
     padding: 0 0 0 25px;
+}
+.sidebar-content-wrapper ul li::after {
+    content: "";
+    color: rgb(255, 255, 255);
 }
 
 .sidebar-content-wrapper ul li p {
@@ -139,8 +142,7 @@ Left sidebar footer
 }
 
 .custom-active {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 25px 0 0 0;
+    border-right:5px solid  rgba(0, 0, 0, 0.3);
 }
 
 .sidebar-content-wrapper ul li i {
