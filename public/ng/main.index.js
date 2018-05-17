@@ -90,6 +90,22 @@ var r = (function mainFun() {
                     }],
 
                 }
+            }).state('home.userplan', {
+                url: '/plan',
+                templateUrl: 'ng/directives/UserPlan/UserPlan.tmpl.html',
+                controller: 'UserPlanController',
+                resolve: {
+                    loadAllMyDirectives: ['$ocLazyLoad', function ($ocLazyLoad) {
+
+                        return $ocLazyLoad.load([
+                            'ng/directives/UserPlan/UserPlan.controller.js',
+                            'ng/directives/UserPlan/UserPlan.directive.js',
+
+                        ]
+                        );
+                    }],
+
+                }
             }).state('home.upload', {
                 url: '/upload',
                 template: '<upload></upload>',
