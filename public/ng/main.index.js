@@ -17,8 +17,8 @@ var r = (function mainFun() {
 
     app.config(function ($stateProvider, $urlRouterProvider) {
 
-        // $urlRouterProvider.otherwise('/login');
-        $urlRouterProvider.otherwise('/home/dashboard');
+        $urlRouterProvider.otherwise('/login');
+        // $urlRouterProvider.otherwise('/home/dashboard');
         $stateProvider
             .state('login', {
                 url: '/login',
