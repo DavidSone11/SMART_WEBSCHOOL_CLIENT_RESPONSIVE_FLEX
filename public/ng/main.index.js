@@ -44,7 +44,7 @@ var r = (function mainFun() {
                 resolve: {
                     loadExternalFiles: ['$ocLazyLoad', function ($ocLazyLoad) {
                         return $ocLazyLoad.load({
-                            name: 'dIApp',
+                            name: 'sbAdminApp',
                             files: [
                                 'ng/directives/home/home.directive.js',
                                 'ng/directives/home/home.controller.js',
@@ -52,7 +52,11 @@ var r = (function mainFun() {
                                 'ng/directives/right-sidebar/right-sidebar.directive.js',
                                 'ng/directives/sub-right-sidebar/sub-right-sidebar.directive.js',
                                 'ng/directives/header/header.directive.js',
-                                'ng/directives/footer/footer.directive.js'
+                                'ng/directives/footer/footer.directive.js',
+                                'ng/directives/horizontal-navigation/horizontal-navigation.directive.js'
+
+
+
 
 
                             ]
