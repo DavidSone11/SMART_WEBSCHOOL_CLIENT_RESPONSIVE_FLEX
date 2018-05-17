@@ -12,6 +12,7 @@
 }
 
 
+
 .left_sidebar .sidebar-content-wrapper ul li a.active {
     background-color: #eee;
 }
@@ -98,4 +99,9 @@
 
 .profile_info h2 {
     color: #fff;
+}
+
+.sidebar-header .no-header-wrapper{
+    width: 100%;
+    float: left;
 }

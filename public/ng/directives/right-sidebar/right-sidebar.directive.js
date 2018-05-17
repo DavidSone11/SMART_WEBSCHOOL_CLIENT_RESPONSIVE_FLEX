@@ -8,8 +8,24 @@ app.directive("rightSidebar", ['$compile', function ($compile) {
 
         controller: function ($scope) {
 
+            $scope.isToggle = false;
 
-        
+            $scope.rightToggler = function () {
+                $(function () {
+                    if ($scope.isToggle) {
+
+                        $('#rightSidebar').animate({ width: "0px" }, "slow");
+                        $('#rightSidebar').animate({ width: "0px" }, "slow");
+                        $('#rightoggleBtn').animate({ left: "-60px" }, "slow");
+
+                    } else {
+                        $('#rightSidebar').animate({ width: "83%" }, "slow");
+                    }
+                });
+
+                $scope.isToggle = !$scope.isToggle;
+            }
+
 
         }
 
