@@ -7,7 +7,7 @@
     bottom: 0;
     background: rgba(42, 63, 84, 1);
     box-shadow: 3px 0px 9px #888888;
-    /* overflow-y: scroll; */
+    min-height: 300vh;
 	transition: all 0.5s linear;
 }
 
