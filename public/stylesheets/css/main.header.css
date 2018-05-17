@@ -61,7 +61,7 @@
 }
 
 .header-right-content nav {
-    padding: 10px 0 0 30px;
+    padding: 10px 0 0 0;
 }
 
 .header-right-content nav a {
@@ -85,9 +85,8 @@
 }
 
 .header-right-content nav ul li {
-    display: inline;
-    padding: 0 15px 0 0;
-    text-indent: 0.1em;
+    display: inline-block;
+    padding: 0 10px 0 0;
 }
 
 .header-right-content nav span.userlogo {
@@ -105,14 +104,14 @@
 }
 
 .badge {
-    position: absolute;
-    margin: 5px 0 0 -5px;
+    /*position: absolute; */
+    margin: 16px 0 0 0px;
     width: 18px;
     height: 18px;
     display: inline-block;
     padding: 3px 5px;
     line-height: 0.9;
-    border-radius: 10px;
+    /* border-radius: 0px; */
 
 }
 
