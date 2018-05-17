@@ -14,7 +14,6 @@ body {
 body {
     /* background: rgb(99, 10, 10); */
     overflow-x: hidden;
-    padding-bottom: 20px;
 }
 
 .main-page-wrapper {
@@ -25,12 +24,13 @@ body {
 
 .main-page-content {
     background: #ffffff;
-    padding:10px 0 0 10px;
-    margin: 72px 0px 0 230px;
+    padding: 10px 0 0 10px;
+    margin: 72px 0px 0 253px;
     min-height: 850px;
-    min-width: 100%; 
-    position: absolute;
-    z-index: -9999;
+    min-width: 100%;
+    position: relative;
+    z-index:1;
+    border-left: 2px solid red;
     
 }
 
