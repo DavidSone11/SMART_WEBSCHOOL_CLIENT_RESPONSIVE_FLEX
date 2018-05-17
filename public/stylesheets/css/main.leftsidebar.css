@@ -111,35 +111,45 @@ Left sidebar footer
     color: rgba(255, 255, 255, 0.6);
 }
 
+.sidebar-content-wrapper li.tap span.sub-arraw::after {
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 12px;
+    float: right;
+    color: rgba(255, 255, 255, 0.6);
+}
+
 .sidebar-content-wrapper ul {
     margin: 0;
     padding: 0;
 }
 
 .sidebar-content-wrapper ul li {
-    list-style: none;
-    padding: 25px 0 0 0;
+    padding: 18px 95px 12px 0;
 }
 
-.sidebar-content-wrapper li :hover {
+.sidebar-content-wrapper li {
+    display: inline-block;   
+}
+
+
+
+
+.sidebar-content-wrapper li a {
     
-   background:  rgba(0, 0, 0, 0.3);
+    padding: 10px 15px;
+    color:#fff;
 }
 
-.sidebar-content-wrapper ul li a {
+.sidebar-content-wrapper li a {
     text-decoration: none;
-    padding: 0 0 0 25px;
-}
-.sidebar-content-wrapper ul li::after {
-    content: "";
-    color: rgb(255, 255, 255);
+    padding: 45px 0 0 20px;
+    min-height: 50px;
 }
 
-.sidebar-content-wrapper ul li p {
-    color: #fff;
-    display: inline;
-    padding: 0 0 0 25px;
-}
+
+
 
 .custom-active {
     border-right:5px solid  rgba(0, 0, 0, 0.3);
@@ -189,14 +199,7 @@ Left sidebar footer
     
 }
 
-.sidebar-content-wrapper li.tap span.sub-arraw::after {
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-right: 12px;
-    float: right;
-    color: rgba(255, 255, 255, 0.6);
-}
+
 
 .sidebar-header .no-header-wrapper{
     width: 100%;
