@@ -50,6 +50,7 @@ var r = (function mainFun() {
                                 'ng/directives/home/home.controller.js',
                                 'ng/directives/left-sidebar/left-sidebar.directive.js',
                                 'ng/directives/right-sidebar/right-sidebar.directive.js',
+                                'ng/directives/sub-right-sidebar/sub-right-sidebar.directive.js',
                                 'ng/directives/header/header.directive.js',
                                 'ng/directives/footer/footer.directive.js'
 
