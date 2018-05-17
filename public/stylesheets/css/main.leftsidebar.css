@@ -1,13 +1,13 @@
 .left_sidebar {
     z-index: 1;
-    position: fixed;
+    position: absolute;
     width: 250px;
     top: 0;
     left: 0;
     bottom: 0;
     background: rgba(42, 63, 84, 1);
     box-shadow: 3px 0px 9px #888888;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 	transition: all 0.5s linear;
 }
 
@@ -58,7 +58,7 @@
 }
 
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 5px;
     height: 50%;
 }
@@ -67,7 +67,7 @@
     border: 1px solid #ffffff;
     border-radius: 3px;
     background-color: rgb(67, 102, 139);
-}
+} */
 
 .sidebar-header {
     margin: 0px 0 0 3px;
