@@ -17,7 +17,7 @@ app.directive("mainHeader", ['$compile', function ($compile) {
                         $('.main-header').animate({ margin: "0 71px" });
                         // $('.sidebar-footer').hide(500);
                         $('.profile_info').hide(500);
-                        // $('#profile_pic_id').removeClass("profile_info");
+                        $('#profile_pic_id').removeClass("profile_info");
                         $('#profile_pic_id').addClass("no-header-wrapper");
                         $('.main-header .header-right-content').animate({'padding':"0px 0 0 152px"});
 

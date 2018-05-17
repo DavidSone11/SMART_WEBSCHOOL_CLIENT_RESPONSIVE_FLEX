@@ -36,6 +36,12 @@
     font-size: 15px;
     font-weight: 500;
     text-transform: capitalize;
+    padding: 0 0 0 20px;
+}
+
+.left_sidebar .sidebar-content-wrapper li i{
+    color:#fff;
+    padding: 0 0 0 10px;
 }
 
 .left_sidebar .sidebar-content-wrapper ul li:hover {
