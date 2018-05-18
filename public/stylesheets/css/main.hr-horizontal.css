@@ -1,6 +1,7 @@
 .main-hr-nav-bar {
     top: 75px;
     position: relative;
+    
 }
 
 .main-hr-nav-bar ul {
@@ -10,6 +11,7 @@
     padding: 0;
     margin: 0;
     box-shadow: 0 4px 5px 0 #a59d9d;
+   
 }
 
 .main-hr-nav-bar li {
