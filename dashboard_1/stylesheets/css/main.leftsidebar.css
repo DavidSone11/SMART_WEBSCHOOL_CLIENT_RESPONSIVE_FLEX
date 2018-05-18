@@ -8,10 +8,8 @@
     background: rgba(42, 63, 84, 1);
     box-shadow: 3px 0px 9px #888888;
     min-height: 300vh;
-	transition: all 0.5s linear;
+    transition: all 0.5s linear;
 }
-
-
 
 .left_sidebar .sidebar-content-wrapper ul li a.active {
     background-color: #eee;
@@ -21,43 +19,75 @@
     min-height: 50px;
 }
 
-
-
 .left_sidebar .sidebar-content-wrapper ul li {
     padding: 10px 22px;
 }
 
-.left_sidebar .sidebar-content-wrapper ul li a{
+.left_sidebar .sidebar-content-wrapper ul li a {
     text-decoration: none;
 }
 
 .left_sidebar .sidebar-content-wrapper ul li a span {
-    color:#fff;
+    color: #fff;
     font-size: 15px;
     font-weight: 500;
     text-transform: capitalize;
     padding: 0 0 0 20px;
 }
 
-.left_sidebar .sidebar-content-wrapper li i{
-    color:#fff;
+.left_sidebar .sidebar-content-wrapper li i {
+    color: #fff;
     padding: 0 0 0 10px;
 }
 
 .left_sidebar .sidebar-content-wrapper ul li:hover {
-    background-color: rgba(4, 10, 3,0.3);
+    background-color: rgba(4, 10, 3, 0.3);
     /* border-bottom: 1px solid #fff; */
     /* transition:  border 0.1s; */
     transition: all 1s linear;
+}
+
+.sidebar-content-wrapper ul li span.sub-arrow::after {
+    content: "\f104";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 12px;
+    float: right;
+    color: rgba(255, 255, 255, 0.6);
+}
+.sidebar-content-wrapper .main-nav-ul ul {
+    display: none;
+}
+
+.sidebar-content-wrapper .main-nav-ul ul li {
+    padding: 15px 0 0 50px;
+  
     
 }
+
+.sidebar-content-wrapper li.tap ul {
+    display: block;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+}
+
+.sidebar-content-wrapper li.tap span.sub-arraw::after {
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 12px;
+    float: right;
+    color: rgba(255, 255, 255, 0.6);
+}
+
 .active {
     border-left: 10px solid #fff;
     opacity: 0.7;
     transition: opacity 60s linear;
     padding: 15px 0 15px 13px !important;
 }
-
 
 /* ::-webkit-scrollbar {
     width: 5px;
@@ -108,28 +138,27 @@
     color: #fff;
 }
 
-.sidebar-header .no-header-wrapper{
+.sidebar-header .no-header-wrapper {
     width: 100%;
     float: left;
 }
 
 .no-side ul li a span {
     text-align: center;
-    font-size: 0px!important;
-    padding: 0 !important; 
+    font-size: 0px !important;
+    padding: 0 !important;
 }
 
 .no-side ul li a i {
     padding: 0;
     text-align: left;
     font-size: 20px;
-    
-
 }
+
 .no-side ul li {
-    padding: 10px 15px!important;
+    padding: 10px 15px !important;
 }
 
 .no-side .active {
-    padding: 10px 0 20px 5px!important;
+    padding: 10px 0 20px 5px !important;
 }
