@@ -11,8 +11,14 @@ app.directive("subRightSidebar", ['$compile', function ($compile) {
             $scope.isToggle = false;
 
             $scope.tab = 1;
+            $scope.isPage = true;
+
+            $scope.isSetPage = function(){
+                return $scope.isPage = !$scope.isPage;
+            }
 
             $scope.setTab = function (newTab) {
+                $scope.isSetPage();
                 $scope.tab = newTab;
             };
 

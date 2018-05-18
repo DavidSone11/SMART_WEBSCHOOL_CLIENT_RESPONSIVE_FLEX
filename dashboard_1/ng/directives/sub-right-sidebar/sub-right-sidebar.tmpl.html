@@ -1,62 +1,51 @@
 <div>
     <style>
-        h1,
-        p,
-        a {
-            color: #4DC9C9 !important;
-        }
-
-        /* button recolor */
-
-        .nav-pills>li.active>a,
-        .btn-primary {
-            background-color: #6C6C6C !important;
-            border-color: #6C6C6C !important;
-            border-radius: 25px;
-        }
     </style>
 
 
     <div class="sub-r-sidebar" id="sub-right-sidebar" style="display: none;">
 
+        <div class="custom-nav-pills">
 
 
+            <ul>
+                <li ng-class="{isactive:isSet(1) }">
 
-        <ul class="nav nav-pills nav-stacked">
-            <li ng-class="{ active: isSet(1) }">
-                <a href="" ng-click="setTab(1)">Home</a>
-            </li>
-            <li ng-class="{ active: isSet(2) }">
-                <a href="" ng-click="setTab(2)">Profile</a>
-            </li>
-            <li ng-class="{ active: isSet(3) }">
-                <a href="" ng-click="setTab(3)">Messages</a>
-            </li>
-        </ul>
+                    <a href="javascript:void(0)" ng-click="setTab(1)">
+                        <i class="fa fa-comments fa-fw"></i>
+                    </a>
+                </li>
+                <li ng-class="{isactive:isSet(2)}">
 
-        <div class="col-md-8">
-            <div class="jumbotron">
-                <div ng-show="isSet(1)">
+                    <a href="javascript:void(0)" ng-click="setTab(2)">
+                        <i class="fa fa-home fa-fw"></i>
+                    </a>
+                </li>
+                <li ng-class="{isactive:isSet(3)}">
+
+                    <a href="javascript:void(0)" ng-click="setTab(3)">
+                        <i class="fa fa-wrench fa-fw"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="custom-page">
+
+                <div ng-show="isSet(1)" ng-class="{animatehide:isSet(1) }">
                     <h1>Home page</h1>
                     <p>Welcome to the website!</p>
-                    <p>
-                        <a class="btn btn-primary btn-lg" role="button">Learn more</a>
-                    </p>
+
                 </div>
-                <div ng-show="isSet(2)">
+                <div ng-show="isSet(2)" ng-class="{animatehide:isSet(2) }">
                     <h1>Profile page</h1>
                     <p>Profile information</p>
                 </div>
-                <div ng-show="isSet(3)">
+                <div ng-show="isSet(3)" ng-class="{animatehide:isSet(3)}">
                     <h1>Messages</h1>
                     <p> Some messages </p>
                 </div>
             </div>
         </div>
-
-
-
-
 
     </div>
 </div>
