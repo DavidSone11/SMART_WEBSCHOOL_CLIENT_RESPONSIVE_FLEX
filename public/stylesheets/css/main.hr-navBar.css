@@ -65,7 +65,21 @@
     top:0px;
 }
 
+.main-hr-navbar ul li ul li ul span {
+   color:green;
+   padding: 0 50px;
+}
 
+.main-hr-navbar ul li ul li span.sub-sub-arrow::after {
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 12px;
+    float: right;
+    color: rgba(255, 255, 255, 0.6);
+    
+ }
+ 
 
 .main-hr-navbar ul li span.sub-arrow::after {
     content: "\f107";
