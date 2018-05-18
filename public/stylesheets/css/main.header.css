@@ -11,7 +11,8 @@
 }
 
 .main-header {
-    margin: 0 255px;
+    /* margin: 0 255px; for top-nav */  
+    margin: 0;
     padding: 0;
 }
 

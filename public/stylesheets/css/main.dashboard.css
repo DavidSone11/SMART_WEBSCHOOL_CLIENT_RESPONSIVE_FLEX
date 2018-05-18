@@ -21,7 +21,7 @@ body {
 
 .main-page-wrapper {
     height:100%;
-    background: rgb(119, 115, 117);
+    /* background: rgb(119, 115, 117); */
     display: flex;
     flex-flow: row wrap;
     
@@ -30,7 +30,9 @@ body {
 .main-page-content {
     background: rgba(250, 250, 250,0.4);
     padding: 10px 0 0 10px;
-    margin: 72px 0px 0 253px;
+    /* margin: 72px 0px 0 253px;       hr-nav omitted */
+    margin: 125px 0 0 1px;
+    
     min-height: 200vh;
     min-width: 100%;
     position: absolute;
