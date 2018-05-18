@@ -29,7 +29,7 @@ app.directive("mainHeader", ['$compile', function ($compile) {
                         $('#main-content-wrapper').animate({ 'margin-left': "231px" });
                         $('#left-sidebar').animate({ 'width': "230px" });
                         $('.main-header').animate({ 'margin': "0 230px" });
-
+                        $('#left-sidebar').removeClass("no-side");
                         // $('.sidebar-footer').show(500);
                         $('.profile_info').show(500);
                         $('#profile_pic_id').removeClass("no-header-wrapper");
