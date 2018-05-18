@@ -30,9 +30,7 @@ body {
 .main-page-content {
     background: rgba(250, 250, 250,0.4);
     padding: 10px 0 0 10px;
-    /* margin: 72px 0px 0 253px;       hr-nav omitted */
-    margin: 125px 0 0 1px;
-    
+    margin: 72px 0px 0 253px;   
     min-height: 200vh;
     min-width: 100%;
     position: absolute;
