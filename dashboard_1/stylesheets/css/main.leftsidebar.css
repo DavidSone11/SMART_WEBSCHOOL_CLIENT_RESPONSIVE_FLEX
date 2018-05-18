@@ -55,6 +55,7 @@
     border-left: 10px solid #fff;
     opacity: 0.7;
     transition: opacity 60s linear;
+    padding: 15px 0 15px 13px !important;
 }
 
 
@@ -114,15 +115,20 @@
 
 .no-side ul li a span {
     text-align: center;
-    font-size: 12px!important;
+    font-size: 0px!important;
     padding: 0 !important; 
 }
 
 .no-side ul li a i {
     padding: 0;
     text-align: left;
+    font-size: 20px;
 
 }
 .no-side ul li {
     padding: 10px 15px!important;
+}
+
+.no-side .active {
+    padding: 10px 0 20px 5px!important;
 }
