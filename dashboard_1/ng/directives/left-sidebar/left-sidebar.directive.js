@@ -6,7 +6,7 @@ app.directive("leftSidebar", ['$compile', function ($compile) {
         replace: true,
         templateUrl: 'ng/directives/left-sidebar/left-sidebar.tmpl.html',
 
-        controller: function ($scope, Fullscreen) {
+        controller: function ($scope, Fullscreen,$state) {
 
             $(function () {
                 $('.has-sub-menu').click(function (e) {
@@ -16,6 +16,10 @@ app.directive("leftSidebar", ['$compile', function ($compile) {
 
 
             });
+
+            $scope.logout = function(){
+                $state.go("login");
+            }
 
 
 

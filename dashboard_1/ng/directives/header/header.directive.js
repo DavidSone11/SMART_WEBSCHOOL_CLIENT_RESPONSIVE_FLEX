@@ -17,7 +17,7 @@ app.directive("mainHeader", ['$compile', function ($compile) {
                         
                         $('#main-content-wrapper').animate({ 'margin-left': "70px" });
                         $('.main-header').animate({ margin: "0 71px" });
-                        // $('.sidebar-footer').hide(500);
+                        $('.sidebar-footer').hide(500);
                         $('.profile_info').hide(500);
                         $('#profile_pic_id').removeClass("profile_info");
                         $('#profile_pic_id').addClass("no-header-wrapper");
@@ -30,7 +30,7 @@ app.directive("mainHeader", ['$compile', function ($compile) {
                         $('#left-sidebar').animate({ 'width': "230px" });
                         $('.main-header').animate({ 'margin': "0 230px" });
                         $('#left-sidebar').removeClass("no-side");
-                        // $('.sidebar-footer').show(500);
+                        $('.sidebar-footer').show(500);
                         $('.profile_info').show(500);
                         $('#profile_pic_id').removeClass("no-header-wrapper");
                         $('.main-header .header-right-content').animate({ 'padding': "0px 0 0 0px" });
