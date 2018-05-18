@@ -27,7 +27,7 @@
     background: #000;
     list-style-type: none;
     color: #fff;
-    width: 80px;
+    width: 89px;
     height: 50px;
     font-size: 15px;
     line-height: 50px;
@@ -58,5 +58,15 @@
     top:0px;
 }
 
+
+
+.main-hr-navbar ul li span.sub-arrow::after {
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 12px;
+    float: right;
+    color: rgba(255, 255, 255, 0.6);
+}
 
 
