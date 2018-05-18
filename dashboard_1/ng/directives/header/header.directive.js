@@ -8,10 +8,10 @@ app.directive("mainHeader", ['$compile', function ($compile) {
         templateUrl: 'ng/directives/header/header.tmpl.html',
 
         controller: function ($scope, $state, $window) {
-            $scope.isToggle = true;
+            $scope.isToggle = false;
             $scope.toggleSideBar = function () {
                 $(function () {
-                    if ($scope.isToggle) {
+                    if (!$scope.isToggle) {
                         $('#left-sidebar').animate({ width: "70px" });
                         $('#main-content-wrapper').animate({ 'margin-left': "70px" });
                         $('.main-header').animate({ margin: "0 71px" });
