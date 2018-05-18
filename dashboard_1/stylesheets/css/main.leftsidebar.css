@@ -111,3 +111,18 @@
     width: 100%;
     float: left;
 }
+
+.no-side ul li a span {
+    text-align: center;
+    font-size: 12px!important;
+    padding: 0 !important; 
+}
+
+.no-side ul li a i {
+    padding: 0;
+    text-align: left;
+
+}
+.no-side ul li {
+    padding: 10px 15px!important;
+}

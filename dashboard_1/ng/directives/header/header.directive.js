@@ -13,6 +13,8 @@ app.directive("mainHeader", ['$compile', function ($compile) {
                 $(function () {
                     if (!$scope.isToggle) {
                         $('#left-sidebar').animate({ width: "70px" });
+                        $('#left-sidebar').addClass("no-side");
+                        
                         $('#main-content-wrapper').animate({ 'margin-left': "70px" });
                         $('.main-header').animate({ margin: "0 71px" });
                         // $('.sidebar-footer').hide(500);
