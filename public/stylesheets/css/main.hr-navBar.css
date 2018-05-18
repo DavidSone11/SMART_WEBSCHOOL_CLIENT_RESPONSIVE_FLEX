@@ -6,7 +6,6 @@
     width: 100%;
     margin: 0 auto;
     height: 150px;
-    padding: 0;
     font-family: 'Kavivanar', cursive;
     font-family: 'Noto Serif', serif;
     z-index:100;
@@ -50,7 +49,7 @@
     display: none;
 }
 
-.main-hr-navbar ul li:hover ul {
+.main-hr-navbar ul li:hover > ul {
     display: block;
 }
 
