@@ -8,7 +8,14 @@ var r = (function mainFun() {
         "ngSanitize",
         "flow",
         "angucomplete-alt",
-        "FBAngular"
+        "FBAngular",
+       "ngCookies",
+        "ngResource",
+        "ngRoute",
+       "smart-table",
+        "toggle-switch",
+        "ngTouch"
+
     ]);
 
     var initInjector = angular.injector(['ng']);
