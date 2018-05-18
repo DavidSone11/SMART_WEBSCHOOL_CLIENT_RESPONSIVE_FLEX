@@ -1,0 +1,18 @@
+.class1,
+.class2 {
+    color: red;
+}
+
+h2 {
+    color: #77C1EF;
+ }
+ 
+ .style {
+    width: 900px;
+ 
+    @media screen and (orientation: portrait) {
+       width:500px;
+       margin-left: 120px;
+    }
+ }
+ 

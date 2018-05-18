@@ -1,0 +1,27 @@
+footer.main-botton-footer {
+    width: 100%;
+    background: rgba(42, 63, 84, 0.7);
+    clear: right;
+    height: 50px;
+}
+
+footer.main-botton-footer .right-footer-content {
+    float: right;
+    margin: 19px 0px 1px 0px;
+    /* padding: 0px 478px; */
+    width: 50%;
+}
+
+footer.main-botton-footer .scroll-top-button {
+    background-color: #232133;
+    padding: 16px;
+    margin: 4px 2px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+}
+
+footer.main-botton-footer i {
+    color: #ebeaf3;
+}

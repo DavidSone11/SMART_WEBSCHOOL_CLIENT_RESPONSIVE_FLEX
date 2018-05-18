@@ -1,0 +1,18 @@
+.sub-r-sidebar {
+    background: #ffffff;
+    float: right;
+    padding: 0;
+    position: absolute;
+    width: 255px;
+    height: auto;
+    left: auto;
+    right:0;
+    top: 70px;
+    bottom: 0;
+    min-height: 300vh;
+    overflow: hidden;
+    z-index: 100;
+    box-shadow: 0 0 4px #888888;
+   
+
+}

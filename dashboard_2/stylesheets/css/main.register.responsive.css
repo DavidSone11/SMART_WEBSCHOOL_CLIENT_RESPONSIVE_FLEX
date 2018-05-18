@@ -1,0 +1,50 @@
+
+
+.registeration-box {
+    width: 500px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 10px 0px #000;
+    -webkit-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+}
+
+.registeration-box input[type="text"] {
+    height: 40px;
+    width: 95%;
+    outline: 0;
+    border: 1px solid #fff;
+    color: #fff;
+    background: 0 0;
+    padding: 0px 0 0px 10px;
+    margin: 10px 0 0 10px;
+}::placeholder {
+    color: rgba(0, 0, 0, 0.9);
+    margin: 0;
+    padding: 0;
+}
+
+.registeration-box input[type="submit"].reg-button {
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: yellowgreen;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.registeration-box input[type="submit"].reg-button:hover {
+    color: #fff;
+    background: rgba(202, 215, 14, 0.9) !important;
+    
+}

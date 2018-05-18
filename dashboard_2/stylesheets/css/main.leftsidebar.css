@@ -1,0 +1,113 @@
+.left_sidebar {
+    z-index: 1;
+    position: absolute;
+    width: 250px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(42, 63, 84, 1);
+    box-shadow: 3px 0px 9px #888888;
+    min-height: 300vh;
+	transition: all 0.5s linear;
+}
+
+
+
+.left_sidebar .sidebar-content-wrapper ul li a.active {
+    background-color: #eee;
+}
+
+.left_sidebar .sidebar-content-wrapper li a {
+    min-height: 50px;
+}
+
+
+
+.left_sidebar .sidebar-content-wrapper ul li {
+    padding: 10px 22px;
+}
+
+.left_sidebar .sidebar-content-wrapper ul li a{
+    text-decoration: none;
+}
+
+.left_sidebar .sidebar-content-wrapper ul li a span {
+    color:#fff;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 0 0 0 20px;
+}
+
+.left_sidebar .sidebar-content-wrapper li i{
+    color:#fff;
+    padding: 0 0 0 10px;
+}
+
+.left_sidebar .sidebar-content-wrapper ul li:hover {
+    background-color: rgba(4, 10, 3,0.3);
+    /* border-bottom: 1px solid #fff; */
+    /* transition:  border 0.1s; */
+    transition: all 1s linear;
+    
+}
+.active {
+    border-left: 10px solid #fff;
+    opacity: 0.7;
+    transition: opacity 60s linear;
+}
+
+
+/* ::-webkit-scrollbar {
+    width: 5px;
+    height: 50%;
+}
+
+::-webkit-scrollbar {
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    background-color: rgb(67, 102, 139);
+} */
+
+.sidebar-header {
+    margin: 0px 0 0 3px;
+    height: 100px;
+    border-bottom: 2px solid #fff;
+    width: 95%;
+}
+
+.sidebar-header .profile_pic {
+    width: 35%;
+    float: left;
+}
+
+.sidebar-header .profile_pic .img-circle {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 20px;
+    border-radius: 50%;
+    padding: 4px -2px 1px 0px;
+    border: 2px solid #fff;
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+}
+
+.sidebar-header .profile_info {
+    padding: 25px 10px 10px;
+    width: 65%;
+    float: left;
+}
+
+.profile_info span {
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.profile_info h2 {
+    color: #fff;
+}
+
+.sidebar-header .no-header-wrapper{
+    width: 100%;
+    float: left;
+}
