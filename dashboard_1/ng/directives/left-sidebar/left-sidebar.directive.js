@@ -6,18 +6,19 @@ app.directive("leftSidebar", ['$compile', function ($compile) {
         replace: true,
         templateUrl: 'ng/directives/left-sidebar/left-sidebar.tmpl.html',
 
-        controller: function ($scope, Fullscreen,$state) {
+        controller: function ($scope, Fullscreen, $state) {
 
             $(function () {
-                $('.has-sub-menu').click(function (e) {
-                    $(this).toggleClass('tap');
-                    $(this).css({ 'transition': 'width 2s' });
-                });
+                // $("#menu").metisMenu({
+                //     toggle: true
+                // });
 
+
+                $("#menu").metisMenu({});
 
             });
 
-            $scope.logout = function(){
+            $scope.logout = function () {
                 $state.go("login");
             }
 

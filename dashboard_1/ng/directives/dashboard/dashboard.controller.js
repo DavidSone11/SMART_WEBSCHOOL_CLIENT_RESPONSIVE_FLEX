@@ -17,6 +17,6 @@ app.controller("DashboardController", function ($scope) {
     console.info("Console.info" + " " + playerFour);
     console.error("Console.error" + " " + playerFive);
 
-
+   
 
 });
