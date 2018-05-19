@@ -30,6 +30,7 @@
     "angular-resource": "^1.7.0",
     "angular-smart-table": "^2.1.11",
     "angular-route": "^1.7.0",
-    "angular-base64": "^2.0.5"
+    "angular-base64": "^2.0.5",
+    "angular-flot": "^0.0.17"
   }
 }

@@ -1,13 +1,111 @@
 <div>
 
-   
-        <h1>Dashboard</h1>
+    <style>
+        .panel-success.panel-colorful {
+            box-shadow: 0 1px 1px #577d2a;
+        }
 
-       
-      
+        .panel-success .panel-heading,
+        .panel-success .panel-footer,
+        .panel-success.panel-colorful {
+            background-color: #8bc34a;
+            border-color: #8bc34a;
+            color: #fff;
+        }
+
+        .panel {
+            border: 0;
+            border-radius: 3px;
+            box-shadow: none !important;
+            margin-bottom: 20px;
+        }
+
+        .panel-success {
+            border-color: #d6e9c6;
+        }
+
+        .panel .panel-heading,
+        .panel>:first-child {
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+        }
+
+        .pad-all {
+            padding: 15px;
+        }
+
+
+        .text-5x,
+        .text-4x,
+        .text-5x,
+        .text-2x,
+        .text-lg,
+        .text-sm,
+        .text-xs {
+            line-height: 1.25;
+            font-size: 4em;
+        }
+
+        .text-semibold {
+            font-weight: 600;
+        }
+
+        .text-lg {
+            font-size: 1.2em;
+        }
+
+        p {
+            margin: 0 0 10px;
+        }
+
+        .mar-no {
+            margin: 0 !important;
+        }
+
+        .text-bold {
+            font-weight: 700;
+        }
+
+        .pull-right {
+            float: right !important;
+        }
+        .sparklines-full-content {
+    margin-left: -10px;
+    transform: translateX(5px) translateY(5px);
+}
+.demo-placeholder {
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	line-height: 1.2em;
+}
+    </style>
+
+
+    <h1>Dashboard</h1>
+
+    <div class="panel panel-success panel-colorful" style="width: 20%;">
+        <div class="pad-all">
+            <p class="text-lg text-semibold">
+                <i class="fas fa-hdd fa-5x"></i> HDD Usage</p>
+            <p class="mar-no">
+                <span class="pull-right text-bold">132Gb</span> Free Space
+            </p>
+            <p class="mar-no">
+                <span class="pull-right text-bold">1,45Gb</span> Used space
+            </p>
+        </div>
+        <div class="pad-top text-center">
+            <!--Placeholder-->
+            <!-- <div id="demo-sparkline-area" class="sparklines-full-content">
+                <canvas width="221" height="60" style="display: inline-block; width: 221.031px; height: 60px; vertical-align: top;"></canvas>
+            </div> -->
+            
+                    <div id="placeholder" style="width:250px;height:140px"></div>
+                
+        </div>
     </div>
 
 
 
-
-
+</div>
