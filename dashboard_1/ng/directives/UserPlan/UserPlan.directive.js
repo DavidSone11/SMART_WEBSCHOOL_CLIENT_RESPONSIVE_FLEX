@@ -21,6 +21,8 @@ app.directive("userPlan", ['$compile', function ($compile) {
 
         controller: function ($scope) {
 
+         
+
         }
 
     }

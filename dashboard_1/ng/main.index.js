@@ -14,8 +14,7 @@ var r = (function mainFun() {
         "ngRoute",
        "smart-table",
         "toggle-switch",
-        "ngTouch",
-        "angular-flot"
+        "ngTouch"
 
     ]);
 
