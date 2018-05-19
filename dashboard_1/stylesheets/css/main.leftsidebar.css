@@ -43,6 +43,21 @@
     transition: all 1s linear;
 }
 
+.left_sidebar .sidebar-content-wrapper ul li ul {
+    padding: 5px 0px 0px 56px;
+}
+
+.left_sidebar .sidebar-content-wrapper ul li ul a p {
+    display: inline-block;
+    padding: 0px 0 0 6px;
+}
+
+.left_sidebar .sidebar-content-wrapper ul li ul li i {
+    padding: 0 !important;
+}
+
+
+
 .sidebar-content-wrapper ul li span.sub-arrow::after {
     content: "\f104";
     font-family: "Font Awesome 5 Free";
