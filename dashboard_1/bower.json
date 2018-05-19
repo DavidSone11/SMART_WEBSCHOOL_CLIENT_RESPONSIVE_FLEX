@@ -32,6 +32,7 @@
     "angular-route": "^1.7.0",
     "angular-base64": "^2.0.5",
     "angular-flot": "^0.0.17",
-    "c3": "^0.6.1"
+    "c3": "^0.6.1",
+    "metismenu": "^2.7.7"
   }
 }
