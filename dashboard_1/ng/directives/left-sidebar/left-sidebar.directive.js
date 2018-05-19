@@ -8,15 +8,13 @@ app.directive("leftSidebar", ['$compile', function ($compile) {
 
         controller: function ($scope, Fullscreen, $state) {
 
-            $(function () {
-                // $("#menu").metisMenu({
-                //     toggle: true
-                // });
+            $scope.isToggle = false;
 
-
-                $("#menu").metisMenu({});
-
-            });
+            $scope.toggleMenu = function ($event) {
+              //  $event.preventDefault();
+               /// $event.stopPropagation();
+                return $scope.isToggle = !$scope.isToggle;
+            }
 
             $scope.logout = function () {
                 $state.go("login");
