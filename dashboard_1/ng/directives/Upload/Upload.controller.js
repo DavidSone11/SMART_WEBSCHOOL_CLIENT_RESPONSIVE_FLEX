@@ -1,7 +1,6 @@
 
 var app = angular.module("sbAdminApp");
-app.controller("UploadController", ['$scope', '$timeout', '$http', function ($scope, $timeout, $http) {
-
+app.controller('UploadController', ['$scope', '$timeout', '$http', function ($scope, $timeout, $http) {
     $scope.files = [];
     $scope.isLoading = false;
     $scope.user = {
@@ -35,17 +34,7 @@ app.controller("UploadController", ['$scope', '$timeout', '$http', function ($sc
     }
 
     $scope.UserUpload = function (file) {
-        console.log(file);
-        $http({
-            url: 'http://localhost:4000/api/v1/userUpload/createUserUpload',
-            method: "POST",
-            data: JSON.stringify(file.files)
-        }).then(function (response) {
         
-        },
-        function (response) { // optional
-        console.log(response);
-        });
     }
 
 

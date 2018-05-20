@@ -6,7 +6,6 @@ var r = (function mainFun() {
         'ngAnimate',
         'angular-loading-bar',
         "ngSanitize",
-        "flow",
         "angucomplete-alt",
         "FBAngular",
         "ngCookies",
@@ -14,7 +13,8 @@ var r = (function mainFun() {
         "ngRoute",
         "smart-table",
         "toggle-switch",
-        "ngTouch"
+        "ngTouch",
+        "ngFileUpload"
 
     ]);
 
