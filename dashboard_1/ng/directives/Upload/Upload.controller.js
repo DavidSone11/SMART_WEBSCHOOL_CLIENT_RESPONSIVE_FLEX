@@ -1,6 +1,6 @@
 
 var app = angular.module("sbAdminApp");
-app.controller('UploadController', ['$scope', '$timeout', '$http', function ($scope, $timeout, $http) {
+app.controller('UploadController', ['$scope', '$timeout', '$http','Upload', function ($scope, $timeout, $http,Upload) {
     $scope.files = [];
     $scope.isLoading = false;
     $scope.user = {
@@ -33,9 +33,24 @@ app.controller('UploadController', ['$scope', '$timeout', '$http', function ($sc
         return window.btoa(binary);
     }
 
-    $scope.UserUpload = function (file) {
-        
-    }
+    $scope.submit = function() {
+        if ($scope.form.file.$valid && $scope.file) {
+          $scope.upload($scope.file);
+        }
+      };
 
+    $scope.upload = function (file) {
+        Upload.upload({
+            url: 'http://localhost:4000/api/v1/userUpload/saveUpload',
+            data: {file: file, 'username':'santosh'}
+        }).then(function (resp) {
+            console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
+        }, function (resp) {
+            console.log('Error status: ' + resp.status);
+        }, function (evt) {
+            var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+            console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
+        });
+    };
 
 }]);

@@ -29,7 +29,7 @@
       color: white;
     }
 
-    
+
     .info {
       border: 1px solid #2196F3;
       color: dodgerblue
@@ -50,7 +50,7 @@
       color: white;
     }
 
-    
+
 
     .danger {
       border: 1px solid #f44336;
@@ -84,17 +84,19 @@
 
   <form enctype="multipart/form-data" name="uploadForm">
 
-    
 
 
-    <button type="button" class="btn info" ng-click="UserUpload($flow)">
-      <i class="fas fa-upload"></i>
-      Upload</button>
 
-      <div class="button" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"
-      ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100"
-      ngf-resize="{width: 100, height: 100}">Select</div>
-    
+
+    <div class="button" ngf-select ngf-select ng-model="file" name="file" ngf-pattern="'image/*'" ngf-accept="'image/*'"
+      ngf-max-size="20MB" ngf-min-height="100" ngf-resize="{width: 100, height: 100}">Select</div>
+
+    <!-- <button type="button" class="btn info" ngf-select="upload($file)">
+          <i class="fas fa-upload"></i>
+          Upload</button> -->
+
+          <button type="submit" class="btn info" ng-click="submit()">
+              <i class="fas fa-upload"></i> Upload</button>
   </form>
 
 
