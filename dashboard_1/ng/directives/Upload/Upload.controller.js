@@ -9,13 +9,7 @@ app.controller("UploadController", ['$scope', '$timeout', '$http', function ($sc
     }
 
     $scope.getUserUploads = function (query, timeout) {
-        
-        
-            return $http.get('http://localhost:4000/api/v1/userUpload/findByfilename?name=' + query);
-        
-        
-
-
+        return $http.get('http://localhost:4000/api/v1/userUpload/findByfilename?name=' + query);
     }
 
 
@@ -38,6 +32,20 @@ app.controller("UploadController", ['$scope', '$timeout', '$http', function ($sc
             binary += String.fromCharCode(bytes[i]);
         }
         return window.btoa(binary);
+    }
+
+    $scope.UserUpload = function (file) {
+        console.log(file);
+        $http({
+            url: 'http://localhost:4000/api/v1/userUpload/createUserUpload',
+            method: "POST",
+            data: JSON.stringify(file.files)
+        }).then(function (response) {
+        
+        },
+        function (response) { // optional
+        console.log(response);
+        });
     }
 
 

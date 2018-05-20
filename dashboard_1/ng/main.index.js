@@ -9,10 +9,10 @@ var r = (function mainFun() {
         "flow",
         "angucomplete-alt",
         "FBAngular",
-       "ngCookies",
+        "ngCookies",
         "ngResource",
         "ngRoute",
-       "smart-table",
+        "smart-table",
         "toggle-switch",
         "ngTouch"
 
@@ -60,7 +60,7 @@ var r = (function mainFun() {
                                 'ng/directives/sub-right-sidebar/sub-right-sidebar.directive.js',
                                 'ng/directives/header/header.directive.js',
                                 'ng/directives/footer/footer.directive.js',
-                                
+
 
 
 
