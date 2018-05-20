@@ -33,27 +33,9 @@ app.controller('UploadController', ['$scope', '$timeout', '$http','Upload', func
         return window.btoa(binary);
     }
 
-    // $scope.submit = function() {
-    //     if ($scope.form.file.$valid && $scope.file) {
-    //       $scope.upload($scope.file);
-    //     }
-    //   };
+    $scope.mainColor = 1;
 
-    // $scope.upload = function (file) {
-    //     Upload.upload({
-    //         url: 'http://localhost:4000/api/v1/userUpload/saveUpload',
-    //         data: {file: file, 'username':'santosh'}
-    //     }).then(function (resp) {
-    //         console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
-    //     }, function (resp) {
-    //         console.log('Error status: ' + resp.status);
-    //     }, function (evt) {
-    //         var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-    //         console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
-    //     });
-    // };
-
-    $scope.uploadPic = function(file) {
+    $scope.uploadUser = function(file) {
         file.upload = Upload.upload({
           url: 'http://localhost:4000/api/v1/userUpload/saveUpload',
           data: {username: $scope.username, file: file},

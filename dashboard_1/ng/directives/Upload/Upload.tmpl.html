@@ -85,6 +85,7 @@
       background-color: #f1a165;
       border-radius: 13px;
       /* (height of inner div) / 2 + padding */
+      width: 600px;
       padding: 3px;
     }
 
@@ -94,7 +95,7 @@
       /* Adjust with JavaScript */
       height: 20px;
       border-radius: 10px;
-      background-image: linear-gradient(to bottom, #f1a165, #f36d0a);
+      background-image: linear-gradient( #f1a165, #f36d0a);
     }
 
     
@@ -122,12 +123,12 @@
       <img ng-show="uploadForm.file.$valid" ngf-thumbnail="picFile" class="thumb">
       <button ng-click="picFile = null" ng-show="picFile">Remove</button>
       <br>
-      <button ng-disabled="!uploadForm.$valid" class="btn info" ng-click="uploadPic(picFile)">
+      <button ng-disabled="!uploadForm.$valid" class="btn info" ng-click="uploadUser(picFile)">
         <i class="fas fa-upload"> Upload</i>
       </button>
 
       <div class="progressbar" ng-show="picFile.progress >= 0">
-        <span style="width:{{picFile.progress}}%" ng-bind="picFile.progress + '%'"></span>
+        <span style="width: picFile.progress 'px' " ng-bind="picFile.progress + '%'"></span>
       </div>
 
 
