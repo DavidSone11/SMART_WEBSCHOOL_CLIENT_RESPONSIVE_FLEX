@@ -72,6 +72,32 @@
     .default:hover {
       background: #e7e7e7;
     }
+
+    .thumb {
+      width: 100px;
+      height: 100px;
+      float: none;
+      position: relative;
+      top: 7px;
+    }
+
+    .progressbar {
+      background-color: #f1a165;
+      border-radius: 13px;
+      /* (height of inner div) / 2 + padding */
+      padding: 3px;
+    }
+
+    .progressbar>span {
+      background-color: #f1a165;
+      
+      /* Adjust with JavaScript */
+      height: 20px;
+      border-radius: 10px;
+      background-image: linear-gradient(to bottom, #f1a165, #f36d0a);
+    }
+
+    
   </style>
 
 
@@ -79,24 +105,42 @@
     <h1>Upload</h1>
   </div>
 
-
-
-
   <form enctype="multipart/form-data" name="uploadForm">
 
 
+    <fieldset>
+      <br>
+      <br> Username:
+      <input type="text" name="userName" ng-model="username" size="31" required>
+      <i ng-show="uploadForm.userName.$error.required"></i>
+      <br>
+      <br>Photo:
+      <input type="file" ngf-select ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB" required ngf-model-invalid="errorFile">
+      <i ng-show="uploadForm.file.$error.required"></i>
+      <br>
+      <i ng-show="uploadForm.file.$error.maxSize">File too large {{errorFile.size / 1000000|number:1}}MB: max 2M</i>
+      <img ng-show="uploadForm.file.$valid" ngf-thumbnail="picFile" class="thumb">
+      <button ng-click="picFile = null" ng-show="picFile">Remove</button>
+      <br>
+      <button ng-disabled="!uploadForm.$valid" class="btn info" ng-click="uploadPic(picFile)">
+        <i class="fas fa-upload"> Upload</i>
+      </button>
+
+      <div class="progressbar" ng-show="picFile.progress >= 0">
+        <span style="width:{{picFile.progress}}%" ng-bind="picFile.progress + '%'"></span>
+      </div>
 
 
 
-    <div class="button" ngf-select ngf-select ng-model="file" name="file" ngf-pattern="'image/*'" ngf-accept="'image/*'"
-      ngf-max-size="20MB" ngf-min-height="100" ngf-resize="{width: 100, height: 100}">Select</div>
+      <span ng-show="picFile.result">Upload Successful</span>
 
-    <!-- <button type="button" class="btn info" ngf-select="upload($file)">
-          <i class="fas fa-upload"></i>
-          Upload</button> -->
+      <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+      <br>
+      <br>
+    </fieldset>
 
-          <button type="submit" class="btn info" ng-click="submit()">
-              <i class="fas fa-upload"></i> Upload</button>
+
+
   </form>
 
 

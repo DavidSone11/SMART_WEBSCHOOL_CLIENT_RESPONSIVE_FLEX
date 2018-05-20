@@ -33,24 +33,45 @@ app.controller('UploadController', ['$scope', '$timeout', '$http','Upload', func
         return window.btoa(binary);
     }
 
-    $scope.submit = function() {
-        if ($scope.form.file.$valid && $scope.file) {
-          $scope.upload($scope.file);
-        }
-      };
+    // $scope.submit = function() {
+    //     if ($scope.form.file.$valid && $scope.file) {
+    //       $scope.upload($scope.file);
+    //     }
+    //   };
 
-    $scope.upload = function (file) {
-        Upload.upload({
-            url: 'http://localhost:4000/api/v1/userUpload/saveUpload',
-            data: {file: file, 'username':'santosh'}
-        }).then(function (resp) {
-            console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
-        }, function (resp) {
-            console.log('Error status: ' + resp.status);
-        }, function (evt) {
-            var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-            console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
+    // $scope.upload = function (file) {
+    //     Upload.upload({
+    //         url: 'http://localhost:4000/api/v1/userUpload/saveUpload',
+    //         data: {file: file, 'username':'santosh'}
+    //     }).then(function (resp) {
+    //         console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
+    //     }, function (resp) {
+    //         console.log('Error status: ' + resp.status);
+    //     }, function (evt) {
+    //         var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+    //         console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
+    //     });
+    // };
+
+    $scope.uploadPic = function(file) {
+        file.upload = Upload.upload({
+          url: 'http://localhost:4000/api/v1/userUpload/saveUpload',
+          data: {username: $scope.username, file: file},
         });
-    };
+    
+        file.upload.then(function (response) {
+          $timeout(function () {
+            file.result = response.data;
+          });
+        }, function (response) {
+          if (response.status > 0)
+            $scope.errorMsg = response.status + ': ' + response.data;
+        }, function (evt) {
+          // Math.min is to fix IE which reports 200% sometimes
+          file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
+        });
+
+    }
+
 
 }]);
