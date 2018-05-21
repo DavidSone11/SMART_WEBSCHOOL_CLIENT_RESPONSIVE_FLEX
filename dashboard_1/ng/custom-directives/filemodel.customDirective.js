@@ -1,4 +1,5 @@
 
+
 var app = angular.module("sbAdminApp");
 app.directive("fileModel", ['$parse', '$compile', function ($parse, $compile) {
 
@@ -25,16 +26,31 @@ app.directive("fileModel", ['$parse', '$compile', function ($parse, $compile) {
         },
         controller: function ($scope, $http) {
             $scope.upload = function () {
-                
+
                 var fd = new FormData();
                 console.log($scope.files);
                 angular.forEach($scope.files, function (file) {
                     fd.append('file', file);
                 });
 
-                console.log("DASdas"+fd);
+              
+                $http({
+                    method: 'POST',
+                    url: 'http://localhost:4000/api/v1/userFileUpload/saveUserFileUpload',
+                    transformRequest: angular.identity,
+                    headers: { 'Content-Type': undefined },
+                    data:fd
 
-                
+                }).then(function success(response) {
+
+                    console.log(response);
+
+                }, function error(response) {
+                    console.log(response);
+
+                });
+
+
             }
 
         }

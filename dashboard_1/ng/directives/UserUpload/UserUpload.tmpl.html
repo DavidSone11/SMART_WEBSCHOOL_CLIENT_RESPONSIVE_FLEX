@@ -36,6 +36,16 @@
       font-size: 15px;
       padding: 4px 0 0 0;
     }
+
+    .custom-start-upload {
+      border: 1px solid #ccc;
+      display: inline-block;
+      padding: 6px 12px;
+      cursor: pointer;
+      width: 200px;
+      height: 40px;
+      background: rgb(97, 50, 205);
+    }
   </style>
 
 
@@ -51,20 +61,14 @@
         </span>
 
       </label>
-      <button ng-click="upload()">
-        <i class="fas fa-plus"></i> Start Upload</button>
+      <button ng-click="upload()" class="custom-start-upload">
+        <i class="fas fa-play-circle"></i> Start Upload</button>
       <button ng-click="upload()">
         <i class="fas fa-ban"></i>Cancel Upload</button>
       <button ng-click="upload()">
         <i class="fas fa-trash"></i>Delete Upload</button>
       </button>
 
-
     </fieldset>
-
-
-
   </form>
-
-
 </div>
