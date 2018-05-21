@@ -134,6 +134,22 @@ var r = (function mainFun() {
                     }],
 
                 }
+            }).state('home.userupload', {
+                url: '/userupload',
+                templateUrl: 'ng/directives/UserUpload/UserUpload.directive.html',
+                controller: 'UserUploadController',
+                resolve: {
+                    loadAllMyDirectives: ['$ocLazyLoad', function ($ocLazyLoad) {
+
+                        return $ocLazyLoad.load([
+                            'ng/directives/UserUpload/UserUpload.controller.js',
+                            'ng/directives/UserUpload/UserUpload.directive.js',
+
+                        ]
+                        );
+                    }],
+
+                }
             })
     });
 }());
