@@ -1,0 +1,68 @@
+<div flow-init="{target: 'http://localhost:4000/api/v1/userUpload/saveUpload',testChunks:false}" flow-name="obj.flow">
+
+
+
+
+  <div class="page-header">
+    <h1>User Upload</h1>
+  </div>
+
+  <form enctype="multipart/form-data" name="uploadForm">
+
+
+    <fieldset class="fieldset">
+      
+
+
+      <input type="file" ngf-select ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB" required ngf-model-invalid="errorFile">
+      <span class="error" ng-show="!uploadForm.file.$error.required">
+        Please choose file to be uploaded?
+      </span>
+      <br>
+      <i ng-show="uploadForm.file.$error.maxSize">File too large {{errorFile.size / 1000000|number:1}}MB: max 2M</i>
+      <img ng-show="uploadForm.file.$valid" ngf-thumbnail="picFile" class="thumb">
+      <button ng-click="picFile = null" ng-show="picFile">Remove</button>
+      <br>
+      <button ng-disabled="!uploadForm.$valid" class="btn info" ng-click="uploadUser(picFile)">
+        <i class="fas fa-upload"> Upload</i>
+      </button>
+
+      <div class="progressbar" ng-show="picFile.progress >= 0">
+        <span style="width: picFile.progress 'px' " ng-bind="picFile.progress + '%'"></span>
+      </div>
+
+
+
+      <span ng-show="picFile.result">Upload Successful</span>
+
+      <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+      <br>
+      <br>
+    </fieldset>
+
+
+
+  </form>
+
+
+
+  <br>
+  <br>
+
+  <angucomplete-alt id="ddlHeadStation" placeholder="Search images" input-name="headstation" pause="400" selected-object="SelectedImage"
+    remote-url-data-field="" title-field="originalFileName" description-field="filename" remote-api-handler="getUserUploads"
+    minlength="2" input-class="autocomplet-style" match-class="highlight"></angucomplete-alt>
+
+
+
+  <picture rows="100%" class="imgBox">
+
+    <div ng-show="isLoading">
+      <i class="fa fa-spinner"></i>
+    </div>
+    <img ng-src="data:{{contentType}};base64,{{base64String}}" width="850" height="auto">
+  </picture>
+
+
+
+</div>
