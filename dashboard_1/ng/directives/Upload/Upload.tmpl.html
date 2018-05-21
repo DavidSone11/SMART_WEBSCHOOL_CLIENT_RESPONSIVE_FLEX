@@ -91,14 +91,22 @@
 
     .progressbar>span {
       background-color: #f1a165;
-      
+
       /* Adjust with JavaScript */
       height: 20px;
       border-radius: 10px;
       background-image: linear-gradient( #f1a165, #f36d0a);
     }
 
-    
+    .error {
+      color: red;
+    }
+
+    .fieldset {
+      padding: 30px 0 10% 8px;
+      width: 80%;
+      margin: 7px 0 20px 0;
+    }
   </style>
 
 
@@ -109,12 +117,14 @@
   <form enctype="multipart/form-data" name="uploadForm">
 
 
-    <fieldset>
-      <br>
-     
-      <br>Photo:
+    <fieldset class="fieldset">
+      
+
+
       <input type="file" ngf-select ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB" required ngf-model-invalid="errorFile">
-      <i ng-show="uploadForm.file.$error.required"></i>
+      <span class="error" ng-show="!uploadForm.file.$error.required">
+        Please choose file to be uploaded?
+      </span>
       <br>
       <i ng-show="uploadForm.file.$error.maxSize">File too large {{errorFile.size / 1000000|number:1}}MB: max 2M</i>
       <img ng-show="uploadForm.file.$valid" ngf-thumbnail="picFile" class="thumb">
