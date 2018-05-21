@@ -10,11 +10,7 @@ app.directive("leftSidebar", ['$compile', function ($compile) {
 
             $scope.isToggle = false;
 
-            $scope.toggleMenu = function ($event) {
-              //  $event.preventDefault();
-               /// $event.stopPropagation();
-                return $scope.isToggle = !$scope.isToggle;
-            }
+           
 
             $scope.logout = function () {
                 $state.go("login");
