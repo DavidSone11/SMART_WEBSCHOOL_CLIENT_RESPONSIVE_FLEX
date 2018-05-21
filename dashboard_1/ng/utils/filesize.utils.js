@@ -81,7 +81,7 @@ var formatSizeUnits = function (bytes, callBackBefore, callBackAfter, callBackAf
         }
         return bytes + ' P';
     }
-    getMultiplers = function (bytes) {
+    function  getMultiplers(bytes) {
         var unit = 1000;
         if (bytes < unit) return bytes;
         var exp = Math.floor(Math.log(bytes) / Math.log(unit));

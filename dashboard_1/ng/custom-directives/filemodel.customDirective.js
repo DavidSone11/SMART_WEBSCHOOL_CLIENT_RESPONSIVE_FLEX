@@ -25,13 +25,13 @@ app.directive("fileModel", ['$parse', '$compile', function ($parse, $compile) {
             }
         },
         controller: function ($scope, $http) {
-            $scope.multFiles = [];
+
             $scope.upload = function () {
                 var formdata = new FormData();
                 console.log($scope.files);
                 angular.forEach($scope.files, function (file) {
                     formdata.append('file', file);
-                    $scope.multFiles.push(file);
+
                 });
 
 
@@ -53,9 +53,7 @@ app.directive("fileModel", ['$parse', '$compile', function ($parse, $compile) {
             },
                 $scope.remove = function (files) {
 
-                    console.log(files);
-
-                    $scope.fileSize = new formatSizeUnits(
+                    new formatSizeUnits(
                         files[0].size,
                         function callBackBefore(res) {
                             console.log(res);
