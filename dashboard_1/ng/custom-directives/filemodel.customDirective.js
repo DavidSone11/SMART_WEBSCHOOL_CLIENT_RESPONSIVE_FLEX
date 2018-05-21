@@ -66,7 +66,7 @@ app.directive("fileModel", ['$parse', '$compile', function ($parse, $compile) {
                         }
                     );
 
-                    console.log("dsa" + files);
+
 
                 }
 
