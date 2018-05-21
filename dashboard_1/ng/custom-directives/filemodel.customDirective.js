@@ -51,20 +51,24 @@ app.directive("fileModel", ['$parse', '$compile', function ($parse, $compile) {
 
                 });
             },
-            $scope.remove = function(files){
+                $scope.remove = function (files) {
 
-                console.log(files);
+                    console.log(files);
 
-                $scope.fileSize = new formatSizeUnits(
-                    files[0].size,
-                    function(res){
+                    $scope.fileSize = new formatSizeUnits(
+                        files[0].size,
+                        function callBackBefore(res) {
+                            console.log(res);
+                        }, function callBackAfter(res) {
+                            console.log(res);
+                        }, function callBackAfterError(res) {
+                            console.log(res);
+                        }
+                    );
 
-                    }
-                );
+                    console.log("dsa" + files);
 
-                console.log("dsa"+files);
-
-            }
+                }
 
         }
     }
