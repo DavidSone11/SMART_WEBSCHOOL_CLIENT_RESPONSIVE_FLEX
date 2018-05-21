@@ -25,21 +25,22 @@ app.directive("fileModel", ['$parse', '$compile', function ($parse, $compile) {
             }
         },
         controller: function ($scope, $http) {
+            $scope.multFiles = [];
             $scope.upload = function () {
-
-                var fd = new FormData();
+                var formdata = new FormData();
                 console.log($scope.files);
                 angular.forEach($scope.files, function (file) {
-                    fd.append('file', file);
+                    formdata.append('file', file);
+                    $scope.multFiles.push(file);
                 });
 
-              
+
                 $http({
                     method: 'POST',
                     url: 'http://localhost:4000/api/v1/userFileUpload/saveUserFileUpload',
                     transformRequest: angular.identity,
                     headers: { 'Content-Type': undefined },
-                    data:fd
+                    data: formdata
 
                 }).then(function success(response) {
 
