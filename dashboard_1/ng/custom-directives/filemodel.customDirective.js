@@ -53,6 +53,15 @@ app.directive("fileModel", ['$parse', '$compile', function ($parse, $compile) {
             },
             $scope.remove = function(files){
 
+                console.log(files);
+
+                $scope.fileSize = new formatSizeUnits(
+                    files[0].size,
+                    function(res){
+
+                    }
+                );
+
                 console.log("dsa"+files);
 
             }

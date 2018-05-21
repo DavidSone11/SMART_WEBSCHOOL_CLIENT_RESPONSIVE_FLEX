@@ -60,7 +60,8 @@ var r = (function mainFun() {
                                 'ng/directives/sub-right-sidebar/sub-right-sidebar.directive.js',
                                 'ng/directives/header/header.directive.js',
                                 'ng/directives/footer/footer.directive.js',
-                                'ng/custom-directives/filemodel.customDirective.js'
+                                'ng/custom-directives/filemodel.customDirective.js',
+                                'ng/utils/filesize.utils.js'
 
 
 
