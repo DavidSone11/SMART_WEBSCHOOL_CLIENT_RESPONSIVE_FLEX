@@ -7,23 +7,34 @@ app.directive("fileModel", ['$parse', '$compile', function ($parse, $compile) {
         compile: function (tElem, tAttrs) {
             console.log(name + ': compile');
             return {
-                pre: function (scope, iElem, iAttrs) {
-                    console.log(name + ': pre link');
-                    iElem.bind('change', function(){
-                        console.log("inside pre link");
-                    });
+                pre: function (scope, elem, attrs) {
+                    // console.log(name + ': pre link');
+                    // elem.bind('change', function(){
+                    //     console.log("inside pre link");
+                    // });
                 },
-                post: function (scope, iElem, iAttrs) {
+                post: function (scope, elem, attrs) {
                     console.log(name + ': post link');
-                    iElem.bind('change', function(){
-                        console.log("inside post link");
+                    elem.bind('change', function () {
+                        $parse(attrs.fileModel).assign(scope, elem[0].files)
+                        scope.$apply();
+
                     });
                 }
             }
         },
         controller: function ($scope, $http) {
             $scope.upload = function () {
-                console.log("DASdas");
+                
+                var fd = new FormData();
+                console.log($scope.files);
+                angular.forEach($scope.files, function (file) {
+                    fd.append('file', file);
+                });
+
+                console.log("DASdas"+fd);
+
+                
             }
 
         }
