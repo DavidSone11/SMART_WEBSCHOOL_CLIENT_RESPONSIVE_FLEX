@@ -50,7 +50,10 @@ app.directive("fileModel", ['$parse', '$compile', function ($parse, $compile) {
                     console.log(response);
 
                 });
+            },
+            $scope.remove = function(){
 
+                console.log("dsa");
 
             }
 
