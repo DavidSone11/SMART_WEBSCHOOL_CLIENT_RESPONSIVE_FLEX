@@ -4,13 +4,23 @@
     <h1>User File Upload</h1>
   </div>
 
+  <style>
+    .fieldset {
+      height:100%;
+      min-height: 300px;
+      width: 80%;
+      padding:50px 0 0 18px;
+    }
+  </style>
+
+
   <form enctype="multipart/form-data" name="uploadForm">
 
 
     <fieldset class="fieldset">
 
       <input type="file" file-model="files" multiple/>
-      <button ng-click="uploadFile()">upload me</button>
+      <button ng-click="upload()">upload me</button>
 
 
     </fieldset>
