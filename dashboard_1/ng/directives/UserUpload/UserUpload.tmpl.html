@@ -23,7 +23,7 @@
       cursor: pointer;
       width: 200px;
       height: 40px;
-      background: yellowgreen;
+      background: linear-gradient(rgb(166, 255, 0), rgb(136, 255, 0));
     }
 
     .custom-file-upload span {
@@ -44,7 +44,38 @@
       cursor: pointer;
       width: 200px;
       height: 40px;
-      background: rgb(97, 50, 205);
+      background: linear-gradient(rgb(0, 4, 255), rgb(0, 60, 255));
+      color: #fff;
+    }
+
+    .custom-cancel-upload {
+      border: 1px solid #ccc;
+      display: inline-block;
+      padding: 6px 12px;
+      cursor: pointer;
+      width: 200px;
+      height: 40px;
+      background: linear-gradient(rgb(255, 115, 0), rgb(255, 60, 0));
+      color: #fff;
+    }
+
+
+    .remove {
+      border: 1px solid #ccc;
+      display: inline-block;
+      padding: 6px 12px;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      color: #fff;
+      background: rgba(217, 83, 79, 1);
+    }
+
+    .remove i,
+    .custom-start-upload i,
+    .custom-start-upload i {
+      color: #ffff;
+      font-size: 20px;
     }
   </style>
 
@@ -63,11 +94,12 @@
       </label>
       <button ng-click="upload()" class="custom-start-upload">
         <i class="fas fa-play-circle"></i> Start Upload</button>
-      <button ng-click="upload()">
+      <button ng-click="upload()" class="custom-cancel-upload">
         <i class="fas fa-ban"></i>Cancel Upload</button>
-      <button ng-click="upload()">
-        <i class="fas fa-trash"></i>Delete Upload</button>
-      </button>
+     
+
+      <br>
+      <br>
 
       <table class="customTable">
         <tr>
@@ -80,7 +112,7 @@
 
         </tr>
         <tr>
-          <td>
+          <td ng-show="files">
             <img src="../../../images/csv.jpg" width="30" height="30" />
           </td>
           <td>{{files[0].name}}</td>
@@ -88,8 +120,8 @@
           <td>{{files[0].type}}</td>
           <td>{{files[0].lastModifiedDate}}</td>
           <td>
-            <button type="button" ng-click="remove()">
-              del
+            <button type="button" class="remove" ng-click="remove(files)">
+              <i class="fas fa-trash"></i>
             </button>
           </td>
         </tr>
