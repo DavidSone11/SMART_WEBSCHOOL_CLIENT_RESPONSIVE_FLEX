@@ -1,7 +1,7 @@
 
 var app = angular.module("sbAdminApp");
-app.controller('UserUploadController', ['$scope', '$timeout', '$http', 'Upload', function ($scope, $timeout, $http, Upload) {
-    
+app.controller('UserUploadController', ['$scope', '$timeout', '$http', 'Upload', 'userUploadFactory', function ($scope, $timeout, $http, Upload, userUploadFactory) {
+
 
     $scope.uploadUser = function (file) {
         file.upload = Upload.upload({
@@ -22,6 +22,19 @@ app.controller('UserUploadController', ['$scope', '$timeout', '$http', 'Upload',
         });
 
     }
+
+
+    $scope.getallUserUpload = function () {
+        userUploadFactory.getAllUserUpload().then(function success(response) {
+
+            console.log(response);
+
+        }, function error(response) {
+
+        });
+    }
+
+    $scope.getallUserUpload();
 
 
 }]);

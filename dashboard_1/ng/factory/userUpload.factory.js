@@ -1,7 +1,7 @@
 'use strict';
 
 var app = angular.module("sbAdminApp");
-app.factory("userUploadFactory", ['$resource', function ($resource) {
+app.factory("userUploadFactory", ['$resource', '$state', '$window', '$cookies', '$location', function ($resource, $state, $window, $cookies, $location) {
 
     var useruploadOBJ = {};
     useruploadOBJ.getAllUserUpload = function () {
