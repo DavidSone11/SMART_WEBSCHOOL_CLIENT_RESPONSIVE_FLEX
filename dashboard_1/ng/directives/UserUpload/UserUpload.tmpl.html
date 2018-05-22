@@ -17,13 +17,13 @@
     }
 
     .custom-file-upload {
-      border: 1px solid #ccc;
-      display: inline-block;
+
+      display: block;
       padding: 6px 12px;
       cursor: pointer;
       width: 200px;
       height: 40px;
-      background: linear-gradient(rgb(166, 255, 0), rgb(136, 255, 0));
+      background: linear-gradient(rgb(93, 177, 91), rgb(127, 211, 31));
     }
 
     .custom-file-upload span {
@@ -31,11 +31,11 @@
       padding: 0 10px 0 0;
     }
 
-    /* .custom-file-upload i {
+    .custom-file-upload i {
       color: #fff;
       font-size: 15px;
-      padding: 4px 0 0 0;
-    } */
+      padding: 5px 17px;
+    }
 
     .custom-start-upload {
       border: 1px solid #ccc;
@@ -86,13 +86,18 @@
     <fieldset class="fieldset">
       <label class="custom-file-upload">
         <input type="file" file-model="files" multiple/>
-        <i class="fas fa-plus"></i>
+
         <span>
+          <i class="fas fa-plus"></i>
           Add Files
         </span>
 
       </label>
-      
+
+      <br>
+      <br>
+
+
       <table class="customTable">
         <tr>
           <th>Preview</th>
@@ -100,7 +105,7 @@
           <th>Filesize</th>
           <th>FileType</th>
           <th>Date</th>
-          <td>Action</td>
+          <th>Action</th>
 
         </tr>
         <tr>
@@ -117,14 +122,55 @@
             </button>
 
             <button ng-click="upload()" class="custom-start-upload">
-              <i class="fas fa-play-circle"></i></button>
+              <i class="fas fa-play-circle"></i>
+            </button>
 
             <button ng-click="upload()" class="custom-cancel-upload">
-              <i class="fas fa-ban"></i></button>
+              <i class="fas fa-ban"></i>
+            </button>
 
           </td>
         </tr>
       </table>
+
+    </fieldset>
+
+    <br>
+    <br>
+    <fieldset class="fieldset">
+
+      <table class="customTable">
+        <tr>
+          <th>Preview</th>
+          <th>FileName</th>
+          <th>Filesize</th>
+          <th>FileType</th>
+          <th>Date</th>
+          <th>Action</th>
+
+        </tr>
+        <tr>
+          <td>
+
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <button type="button" class="remove" ng-click="remove(files)">
+              <i class="fas fa-trash"></i>
+            </button>
+
+            <button ng-click="upload()" class="custom-start-upload">
+              <i class="fas fa-play-circle"></i>
+            </button>
+
+
+          </td>
+        </tr>
+      </table>
+
 
     </fieldset>
   </form>
