@@ -24,6 +24,8 @@ app.controller('UserUploadController', ['$scope', '$timeout', '$http', 'Upload',
 
     }
 
+
+    
     
 
     $scope.getallUserUpload = function () {
@@ -34,6 +36,8 @@ app.controller('UserUploadController', ['$scope', '$timeout', '$http', 'Upload',
     }
 
     $scope.getallUserUpload();
+
+    console.log("dsadsadas",uploadFactory.query());
 
 
 }]);
