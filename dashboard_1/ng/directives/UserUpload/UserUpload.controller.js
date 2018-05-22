@@ -1,6 +1,6 @@
 
 var app = angular.module("sbAdminApp");
-app.controller('UserUploadController', ['$scope', '$timeout', '$http', 'Upload', 'userUploadFactory','uploadFactory', function ($scope, $timeout, $http, Upload, userUploadFactory,uploadFactory) {
+app.controller('UserUploadController', ['$scope', '$timeout', '$http', 'Upload', 'userUploadFactory', 'uploadFactory', function ($scope, $timeout, $http, Upload, userUploadFactory, uploadFactory) {
 
 
     $scope.userUploadLists = [];
@@ -25,19 +25,21 @@ app.controller('UserUploadController', ['$scope', '$timeout', '$http', 'Upload',
     }
 
 
-    
-    
+
+
 
     $scope.getallUserUpload = function () {
-        userUploadFactory.getUpload().then(function(successResponse) {
-            $scope.userUploadLists = successResponse.data.results;
-            
-        })
+      
+        uploadFactory.getAllUserUploads("10","1","fileName").query().$promise.then(function (response) {
+            $scope.userUploadLists = response.results;
+
+        }, function (errResponse) {
+        });
     }
 
     $scope.getallUserUpload();
 
-    console.log("dsadsadas",uploadFactory.query());
+
 
 
 }]);
