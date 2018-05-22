@@ -1,6 +1,6 @@
 
 var app = angular.module("sbAdminApp");
-app.controller('UserUploadController', ['$scope', '$timeout', '$http', 'Upload', 'userUploadFactory', function ($scope, $timeout, $http, Upload, userUploadFactory) {
+app.controller('UserUploadController', ['$scope', '$timeout', '$http', 'Upload', 'userUploadFactory','uploadFactory', function ($scope, $timeout, $http, Upload, userUploadFactory,uploadFactory) {
 
 
     $scope.userUploadLists = [];

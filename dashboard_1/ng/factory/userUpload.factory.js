@@ -2,10 +2,6 @@
 
 var app = angular.module("sbAdminApp");
 app.factory("userUploadFactory", ['$resource', '$state', '$window', '$cookies', '$location', '$http', '$q', function ($resource, $state, $window, $cookies, $location, $http, $q) {
-
-
-
-
     var userRes = {
         getUpload: function () {
             var deferred = $q.defer();
@@ -21,10 +17,6 @@ app.factory("userUploadFactory", ['$resource', '$state', '$window', '$cookies', 
             return deferred.promise;
         }
     }
-
     return userRes;
-
-
-
 }]);
 

@@ -65,7 +65,8 @@ var r = (function mainFun() {
 
 
                                 // all the factory services providers
-                                'ng/factory/userUpload.factory.js'
+                                'ng/factory/userUpload.factory.js',
+                                'ng/factory/upload.factory.js'
 
 
 
