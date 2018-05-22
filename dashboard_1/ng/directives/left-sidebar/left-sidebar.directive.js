@@ -9,7 +9,7 @@ app.directive("leftSidebar", ['$compile', function ($compile) {
         controller: function ($scope, Fullscreen, $state) {
 
             $scope.isToggle = false;
-            $scope.isUserUploadToggle = false;
+            
 
            
 

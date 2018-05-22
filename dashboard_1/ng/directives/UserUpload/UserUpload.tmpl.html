@@ -31,18 +31,18 @@
       padding: 0 10px 0 0;
     }
 
-    .custom-file-upload i {
+    /* .custom-file-upload i {
       color: #fff;
       font-size: 15px;
       padding: 4px 0 0 0;
-    }
+    } */
 
     .custom-start-upload {
       border: 1px solid #ccc;
       display: inline-block;
       padding: 6px 12px;
       cursor: pointer;
-      width: 200px;
+      width: 40px;
       height: 40px;
       background: linear-gradient(rgb(0, 4, 255), rgb(0, 60, 255));
       color: #fff;
@@ -53,7 +53,7 @@
       display: inline-block;
       padding: 6px 12px;
       cursor: pointer;
-      width: 200px;
+      width: 40px;
       height: 40px;
       background: linear-gradient(rgb(255, 115, 0), rgb(255, 60, 0));
       color: #fff;
@@ -75,7 +75,7 @@
     .custom-start-upload i,
     .custom-start-upload i {
       color: #ffff;
-      font-size: 20px;
+      font-size: 15px;
     }
   </style>
 
@@ -92,15 +92,7 @@
         </span>
 
       </label>
-      <button ng-click="upload()" class="custom-start-upload">
-        <i class="fas fa-play-circle"></i> Start Upload</button>
-      <button ng-click="upload()" class="custom-cancel-upload">
-        <i class="fas fa-ban"></i>Cancel Upload</button>
-     
-
-      <br>
-      <br>
-
+      
       <table class="customTable">
         <tr>
           <th>Preview</th>
@@ -123,6 +115,13 @@
             <button type="button" class="remove" ng-click="remove(files)">
               <i class="fas fa-trash"></i>
             </button>
+
+            <button ng-click="upload()" class="custom-start-upload">
+              <i class="fas fa-play-circle"></i></button>
+
+            <button ng-click="upload()" class="custom-cancel-upload">
+              <i class="fas fa-ban"></i></button>
+
           </td>
         </tr>
       </table>
