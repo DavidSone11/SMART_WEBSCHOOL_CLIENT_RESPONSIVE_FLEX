@@ -61,7 +61,11 @@ var r = (function mainFun() {
                                 'ng/directives/header/header.directive.js',
                                 'ng/directives/footer/footer.directive.js',
                                 'ng/custom-directives/filemodel.customDirective.js',
-                                'ng/utils/filesize.utils.js'
+                                'ng/utils/filesize.utils.js',
+
+
+                                // all the factory services providers
+                                'ng/factory/userUpload.factory.js'
 
 
 
