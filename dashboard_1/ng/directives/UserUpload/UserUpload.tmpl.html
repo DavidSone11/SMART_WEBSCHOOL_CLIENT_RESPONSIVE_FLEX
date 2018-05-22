@@ -141,22 +141,27 @@
 
       <table class="customTable">
         <tr>
-          <th>Preview</th>
           <th>FileName</th>
-          <th>Filesize</th>
-          <th>FileType</th>
-          <th>Date</th>
+          <th>mimeType</th>
+          <th>originalFileName</th>
+          <th>Uploaded By</th>
+          <th>Status</th>
+          <th>Type</th>
+          <th>isProcessed</th>
           <th>Action</th>
 
         </tr>
 
         <tbody>
           <tr ng-repeat="userupload in userUploadLists">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>{{userupload.fileName}}</td>
+            <td>{{userupload.fileType}}</td>
+            <td>{{userupload.originalFileName}}</td>
+            <td>{{userupload.uploadedBy}}</td>
+            <td>{{userupload.status}}</td>
+            <td>{{userupload.extension}}</td>
+            <td>{{userupload.isProcessed}}</td>
+
             <td>
               <button type="button" class="remove" ng-click="remove(files)">
                 <i class="fas fa-trash"></i>
