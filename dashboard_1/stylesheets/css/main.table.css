@@ -3,7 +3,6 @@ table.customTable {
     border-collapse: collapse;
 }
 
-
 tr:nth-of-type(odd) {
     background: #eee;
 }
@@ -12,6 +11,12 @@ th {
     background: #333;
     color: white;
     font-weight: bold;
+}
+
+td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 td,

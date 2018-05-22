@@ -163,13 +163,16 @@
             <td>{{userupload.isProcessed}}</td>
 
             <td>
+
+                <button ng-click="upload()" class="custom-start-upload">
+                    <i class="fas fa-play-circle"></i>
+                  </button>
+                  
               <button type="button" class="remove" ng-click="remove(files)">
                 <i class="fas fa-trash"></i>
               </button>
 
-              <button ng-click="upload()" class="custom-start-upload">
-                <i class="fas fa-play-circle"></i>
-              </button>
+            
 
 
             </td>

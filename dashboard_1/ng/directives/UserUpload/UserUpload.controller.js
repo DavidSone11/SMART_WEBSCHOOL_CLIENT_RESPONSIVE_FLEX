@@ -24,6 +24,7 @@ app.controller('UserUploadController', ['$scope', '$timeout', '$http', 'Upload',
 
     }
 
+    
 
     $scope.getallUserUpload = function () {
         userUploadFactory.getUpload().then(function(successResponse) {
