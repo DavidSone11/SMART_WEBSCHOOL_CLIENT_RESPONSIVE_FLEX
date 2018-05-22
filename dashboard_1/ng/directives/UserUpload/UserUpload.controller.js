@@ -3,6 +3,7 @@ var app = angular.module("sbAdminApp");
 app.controller('UserUploadController', ['$scope', '$timeout', '$http', 'Upload', 'userUploadFactory', function ($scope, $timeout, $http, Upload, userUploadFactory) {
 
 
+    $scope.userUploadLists = [];
     $scope.uploadUser = function (file) {
         file.upload = Upload.upload({
             url: 'http://localhost:4000/api/v1/userUpload/saveUpload',
@@ -25,13 +26,10 @@ app.controller('UserUploadController', ['$scope', '$timeout', '$http', 'Upload',
 
 
     $scope.getallUserUpload = function () {
-        userUploadFactory.getAllUserUpload().then(function success(response) {
-
-            console.log(response);
-
-        }, function error(response) {
-
-        });
+        userUploadFactory.getUpload().then(function(successResponse) {
+            $scope.userUploadLists = successResponse.data.results;
+            console.log($scope.userUploadLists);
+        })
     }
 
     $scope.getallUserUpload();
