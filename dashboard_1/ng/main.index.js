@@ -15,7 +15,8 @@ var r = (function mainFun() {
         "toggle-switch",
         "ngTouch",
         "ngFileUpload",
-        "ngMessages"
+        "ngMessages",
+        "toaster"
 
     ]);
 
@@ -62,6 +63,7 @@ var r = (function mainFun() {
                                 'ng/directives/header/header.directive.js',
                                 'ng/directives/footer/footer.directive.js',
                                 'ng/custom-directives/filemodel.customDirective.js',
+                                'ng/custom-directives/loading-spinner.directive.js',
                                 'ng/utils/filesize.utils.js',
 
 

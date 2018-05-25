@@ -1,17 +1,18 @@
 
 var app = angular.module("sbAdminApp");
-app.controller("DashboardController", function ($scope, $compile,$timeout) {
+app.controller("DashboardController", function ($scope, $compile, $timeout) {
 
-    $scope.loading = false;
+    $scope.loading = true;
 
-    setTimeout(function() {
+    setTimeout(function () {
         $scope.message = 'Dashboard';
         console.log('message:' + $scope.message);
         $scope.$apply(); //this triggers a $digest
-        
-      }, 2000);
+        $scope.loading = false;
+        angular.element(document.querySelector('[id="main-page-wrapper"]')).addClass('overlay-main-page-wrapper');
+    }, 2000);
 
-      $timeout(function () {
+    $timeout(function () {
         $scope.myHeader = "How are you today?";
     }, 2000);
 

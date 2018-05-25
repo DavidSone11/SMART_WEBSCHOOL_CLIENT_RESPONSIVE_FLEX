@@ -1,18 +1,22 @@
 
 
 var app = angular.module("sbAdminApp");
-app.directive("LoadingSpinner", ['$parse', '$compile', function ($parse, $compile) {
+app.directive("loadingSpinner", ['$parse', '$compile', function ($parse, $compile) {
 
     return {
-        restrict: 'A',
-        template: '<div ng-show="requestLoading" class= "super-cool-spinner" > '+
-                    'Loading text with the spinner...'+
-                    '</div>' +
-                    '<div ng-transclude ng-show="!requestLoading"></div>',
+        restrict: 'EA',
+        scope: {
+            loadingSpinner: '='
+        },
+        transclude: true,
+        template: '<div ng-show="loadingSpinner" class= "super-cool-spinner">' +
+            '<i class="fa fa-spinner fa-spin"></i>' +
+            '</div>' +
+            '<div ng-transclude ng-show="!loadingSpinner"></div>',
 
 
         link: function (scope, elem, attrs) {
-
+            
         },
     }
 
