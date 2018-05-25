@@ -9,7 +9,7 @@ app.factory("uploadFactory", ['$resource', '$state', '$window', '$cookies', '$lo
             var apiUrl = "http://localhost:4000/api/v1/userFileUpload/getAllUserUpload";
             return $resource(apiUrl, null, {
                 'query': {
-                    method: 'GET',
+                    method: "GET",
                     url: apiUrl,
                     isArray: false,
                     headers: {

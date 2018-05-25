@@ -14,7 +14,8 @@ var r = (function mainFun() {
         "smart-table",
         "toggle-switch",
         "ngTouch",
-        "ngFileUpload"
+        "ngFileUpload",
+        "ngMessages"
 
     ]);
 

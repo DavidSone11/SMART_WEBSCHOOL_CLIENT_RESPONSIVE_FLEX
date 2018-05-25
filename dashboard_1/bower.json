@@ -33,6 +33,7 @@
     "angular-base64": "^2.0.5",
     "angular-flot": "^0.0.17",
     "c3": "^0.6.1",
-    "metismenu": "^2.7.7"
+    "metismenu": "^2.7.7",
+    "angular-messages": "^1.7.0"
   }
 }
