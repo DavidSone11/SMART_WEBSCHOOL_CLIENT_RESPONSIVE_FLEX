@@ -2,6 +2,7 @@
 var app = angular.module("sbAdminApp");
 app.controller("DashboardController", function ($scope, $compile,$timeout) {
 
+    $scope.loading = false;
 
     setTimeout(function() {
         $scope.message = 'Dashboard';

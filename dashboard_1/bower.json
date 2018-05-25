@@ -34,6 +34,7 @@
     "angular-flot": "^0.0.17",
     "c3": "^0.6.1",
     "metismenu": "^2.7.7",
-    "angular-messages": "^1.7.0"
+    "angular-messages": "^1.7.0",
+    "AngularJS-Toaster": "angularjs-toaster#^2.2.0"
   }
 }
