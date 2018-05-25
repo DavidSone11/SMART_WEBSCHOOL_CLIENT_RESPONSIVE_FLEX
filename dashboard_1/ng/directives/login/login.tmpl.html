@@ -1,13 +1,25 @@
 <div>
 
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+
     <div class="login-wrapper">
         <div class="login-box is-hide" ng-hide="isRegister||isForget">
-            <form role="form" name="loginFrom" ng-submit="login(username,password)">
+            <form role="form" name="loginFrom" ng-submit="login(username,password)" novalidate="">
+              
 
+                <input type="text" id="lUserName" name="username" placeholder="Username" class="userbox-box" required autofocus ng-model="username">
+                <div ng-messages="loginFrom.username.$error">
+                    <div ng-message="required" ng-show="loginFrom.username.$error" class="error">Please Enter your Username</div>
+                </div>
 
-                <input type="text" id="lUserName" placeholder="Username" class="userbox-box" required autofocus ng-model="username">
-
-                <input type="password" id="lPassword" placeholder="************" class="password-box" required ng-model="password">
+                <input type="password" id="lPassword" name="password" placeholder="************" class="password-box" required ng-model="password">
+                <div ng-messages="loginFrom.password.$error">
+                    <div ng-message="required" ng-show="loginFrom.password.$error" class="error">Please Enter your Password</div>
+                </div>
 
                 <div class="rDIV_I">
                     <button type="button" class="login-cancel-button">

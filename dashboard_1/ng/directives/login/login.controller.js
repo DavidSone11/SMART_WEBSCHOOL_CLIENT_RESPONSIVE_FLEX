@@ -8,8 +8,11 @@ app.controller("LoginController", function ($scope, $state, $window) {
     $scope.login = function (username, password) {
 
 
+        setTimeout(function() {
+            $state.go("home.dashboard");
+          }, 2000);
 
-        $state.go("home.dashboard");
+       
 
     }
 

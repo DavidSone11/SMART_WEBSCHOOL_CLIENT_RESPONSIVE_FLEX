@@ -50,6 +50,10 @@
         padding: 0px 0 0px 10px;
         
     }
+
+    .login-box ::-webkit-input-placeholder{
+        color:#fff;
+    }
     .login-box button {
         margin-bottom: 5px;
     }
