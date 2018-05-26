@@ -51,9 +51,9 @@
         
     }
 
-    .login-box ::-webkit-input-placeholder{
-        color:#fff;
-    }
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: pink;
+      }
     .login-box button {
         margin-bottom: 5px;
     }

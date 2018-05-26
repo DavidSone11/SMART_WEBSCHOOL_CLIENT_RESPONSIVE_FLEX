@@ -9,7 +9,7 @@ app.controller("DashboardController", function ($scope, $compile, $timeout) {
         console.log('message:' + $scope.message);
         $scope.$apply(); //this triggers a $digest
         $scope.loading = false;
-        angular.element(document.querySelector('[id="main-page-wrapper"]')).addClass('overlay-main-page-wrapper');
+        angular.element(document.querySelector('[id="page-wrapper"]')).addClass('overlay-main-page-wrapper');
     }, 2000);
 
     $timeout(function () {
