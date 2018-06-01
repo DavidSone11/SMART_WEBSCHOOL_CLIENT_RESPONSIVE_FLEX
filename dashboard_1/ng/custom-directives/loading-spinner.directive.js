@@ -13,8 +13,7 @@ app.directive("loadingSpinner", ['$parse', '$compile', function ($parse, $compil
             '<i class="fa fa-spinner fa-spin"></i>' +
             '</div>' +
             '<div ng-transclude ng-show="!loadingSpinner"></div>',
-
-
+            
         link: function (scope, elem, attrs) {
             
         },
