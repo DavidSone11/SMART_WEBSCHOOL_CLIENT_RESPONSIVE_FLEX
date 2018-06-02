@@ -1,8 +1,17 @@
-
+"use strict";
 var app = angular.module("sbAdminApp");
 app.controller("DashboardController", function ($scope, $compile, $timeout) {
 
     $scope.loading = true;
+    const a =10;
+    let b = 10;
+    let arr = [11,22,33,44,45,44,66];
+    let mySet = new Set(arr);
+    console.log(mySet);
+
+    console.log(a+b);
+
+    
 
     setTimeout(function () {
         $scope.message = 'Dashboard';
