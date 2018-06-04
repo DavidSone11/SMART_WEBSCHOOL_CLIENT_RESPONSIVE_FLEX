@@ -12,26 +12,38 @@ app.controller("DashboardController", function ($scope, $parse, $timeout, $compi
     console.log($interpolate("The Result is : {{a+b}}")($scope));
     console.log($parse("a+b")($scope));
 
-    console.log("Hello World".substring(4, 1));
-    var pi = "Hello World!";
-    var str = pi.replace(/^\s+|\s+$/gm, '');
-    console.log(str);
+    //console.log("Hello World".substring(4, 1));
+    //var greeting = "    Hello            World    !";
+    //var str = pi.replace(/^\s+|\s+$/gm, '');
+    
+    function cleanStr(str) {
+        // while (str.indexOf("\t") > -1) {
+        //     str = str.replace("\t", " ");
+        // }
+        while (str.indexOf("  ") > -1) {
+            str = str.replace("  ", " ");
+        }
+        return str;
+    }
+    console.log(cleanStr("    Hello            World    !"));
+    //console.log(greeting);
+
+   
 
 
 
 
+    // setTimeout(function () {
+    //     $scope.message = 'Dashboard';
+    //     console.log('message:' + $scope.message);
+    //     $scope.$apply(); //this triggers a $digest
+    //     $scope.loading = false;
+    //     // angular.element(document.querySelector('[id="page-wrapper"]')).addClass('overlay-main-page-wrapper');
+    // }, 2000);
 
-    setTimeout(function () {
-        $scope.message = 'Dashboard';
-        console.log('message:' + $scope.message);
-        $scope.$apply(); //this triggers a $digest
-        $scope.loading = false;
-        // angular.element(document.querySelector('[id="page-wrapper"]')).addClass('overlay-main-page-wrapper');
-    }, 2000);
-
-    $timeout(function () {
-        $scope.myHeader = "How are you today?";
-    }, 2000);
+    // $timeout(function () {
+    //     $scope.myHeader = "How are you today?";
+    // }, 2000);
 
 
 });
