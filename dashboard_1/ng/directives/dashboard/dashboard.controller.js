@@ -9,6 +9,82 @@ app.controller("DashboardController", function ($scope, $parse, $timeout, $compi
     let mySet = new Set(arr);
     console.log(mySet);
 
+    $scope.userlists= [];
+    $scope.userlists.push(
+        { 
+            
+            "roleCode" : "Planner", 
+            "markDelete" : false, 
+            "userName" : "admin", 
+            "firstName" : "adminR", 
+            "lastName" : "adminR", 
+            "password" : "admin", 
+            "email" : "admin", 
+            "createdTime" : "2018-05-12T12:31:41.016+0000", 
+           
+        },
+        { 
+            
+            "roleCode" : "Planner", 
+            "markDelete" : false, 
+            "userName" : "admin", 
+            "firstName" : "adminR", 
+            "lastName" : "adminR", 
+            "password" : "admin123456", 
+            "email" : "admin", 
+            "createdTime" : "2018-05-12T12:32:07.110+0000", 
+           
+        },
+        { 
+            
+            "roleCode" : "Planner", 
+            "markDelete" : false, 
+            "userName" : "admin", 
+            "firstName" : "adminR", 
+            "lastName" : "adminR", 
+            "password" : "admin123456", 
+            "email" : "admin", 
+            "createdTime" : "2018-05-12T12:32:07.775+0000", 
+           
+        },
+        { 
+            
+            "roleCode" : "Planner", 
+            "markDelete" : false, 
+            "userName" : "admin", 
+            "firstName" : "adminR", 
+            "lastName" : "adminR", 
+            "password" : "admin123456", 
+            "email" : "admin", 
+            "createdTime" : "2018-05-12T12:32:08.355+0000", 
+           
+        },
+        { 
+            
+            "roleCode" : "Planner", 
+            "markDelete" : false, 
+            "userName" : "admin", 
+            "firstName" : "adminR", 
+            "lastName" : "adminR", 
+            "password" : "admin123456", 
+            "email" : "admin", 
+            "createdTime" : "2018-05-12T12:32:08.884+0000", 
+           
+        },
+        { 
+        
+            "roleCode" : "Planner", 
+            "markDelete" : false, 
+            "userName" : "admin", 
+            "firstName" : "adminR", 
+            "lastName" : "adminR", 
+            "password" : "admin123456", 
+            "email" : "admin", 
+            "createdTime" : "2018-05-12T12:32:09.409+0000", 
+           
+        });
+
+
     console.log($interpolate("The Result is : {{a+b}}")($scope));
     console.log($parse("a+b")($scope));
 
